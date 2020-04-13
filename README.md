@@ -95,6 +95,57 @@ Result will be
 
 All coordinates are rounded with 2 decimals.
 
+# Example
+
+Dataset: `[23, 20, 19, 14, 9, 8, 7]`
+
+```
+const { getTreemap } = require('treemap-squarify');
+
+const result = getTreemap({
+  data: [
+    { value: 23, color: '#1B277C', label: '23' },
+    { value: 20, color: '#2C5A9C', label: '20' },
+    { value: 19, color: '#3984B6', label: '19' },
+    { value: 14, color: '#3F97C2', label: '14' },
+    { value: 9, color: '#78C6D0', label: '9' },
+    { value: 8, color: '#AADACC', label: '8' },
+    { value: 7, color: '#DCECC9', label: '7' },
+   ],
+  width: 700,
+  height: 600,
+});
+```
+And in vue.js, for example, you can use SVG to create the treemap:
+```
+<svg :width="treemapWidth" :height="treemapHeight">
+  <g
+    v-for="rectangle in result"
+    :key="`${rectangle.x}:${rectangle.y}`"
+    class="treemap__rectangle"
+    :fill="rectangle.color"
+  >
+    <rect
+      :x="rectangle.x"
+      :y="rectangle.y"
+      :width="rectangle.width"
+      :height="rectangle.height"
+    ></rect>
+    <text
+      :x=getXText(rectangle)
+      :y=getYText(rectangle)
+      fill="white"
+    >
+      {{ rectangle.label }}
+    </text>
+  </g>
+  Sorry, your browser does not support inline SVG.
+</svg>
+```
+
+The result will be:
+
+![](example/treemap.png)
 # Licensing
 
 The code in this project is licensed under MIT license.
