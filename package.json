@@ -1,0 +1,55 @@
+{
+  "name": "squarify-treemap",
+  "version": "1.0.0",
+  "description": "Calculates the treemap coordinates following the squarify algorithm",
+  "author": "Clément Bataille",
+  "license": "ISC",
+  "repository": "https://github.com/clementbat/treemap.git",
+  "main": "src/index.js",
+  "scripts": {
+    "build:bundle": "browserify temp/index.js > temp/bundle.js",
+    "build:compile": "babel src --out-dir temp",
+    "build:uglify": "mkdir lib && uglifyjs temp/bundle.js -cm > lib/bundle.min.js",
+    "build:reset": "rm -rf lib && rm -rf temp",
+    "build": "npm run build:reset && npm run build:compile && npm run build:bundle && npm run build:uglify && rm -rf temp",
+    "coverage": "nyc npm run test",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "test": "mocha tests"
+  },
+  "files": [
+    "src",
+    "lib/bundle.min.js"
+  ],
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "browserify": "^16.5.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-mocha": "^6.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-security": "^1.4.0",
+    "mocha": "^7.1.1",
+    "nyc": "^15.0.1",
+    "uglify-js": "^3.9.0"
+  },
+  "keywords": [
+    "treemap",
+    "squarify",
+    "coordinates",
+    "tree",
+    "map"
+  ],
+  "browserslist": [
+    "defaults"
+  ]
+}

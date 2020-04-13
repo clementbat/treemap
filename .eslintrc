@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "mocha",
+    "security"
+  ],
+  "extends": [
+    "airbnb-base",
+    "plugin:node/recommended",
+    "plugin:security/recommended",
+    "plugin:mocha/recommended"
+  ]
+}
