@@ -1,5 +1,5 @@
 {
-  "name": "squarify-treemap",
+  "name": "treemap-squarify",
   "version": "1.0.0",
   "description": "Calculates the treemap coordinates following the squarify algorithm",
   "author": "Clément Bataille",
@@ -7,7 +7,7 @@
   "repository": "https://github.com/clementbat/treemap.git",
   "main": "src/index.js",
   "scripts": {
-    "build:bundle": "browserify temp/index.js > temp/bundle.js",
+    "build:bundle": "browserify -s getTreemap temp/index.js > temp/bundle.js",
     "build:compile": "babel src --out-dir temp",
     "build:uglify": "mkdir lib && uglifyjs temp/bundle.js -cm > lib/bundle.min.js",
     "build:reset": "rm -rf lib && rm -rf temp",

@@ -3,12 +3,18 @@ Treemap squarify is calculating coordinates of a treemap representation followin
 
 # Install
 
+With npm
 ```
 npm install treemap-squarify
+```
+Or in the browser
+```
+<script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.0/lib/bundle.min.js"></script>
 ```
 
 # Usage
 
+With npm
 ```
 const { getTreemap } = require('treemap-squarify');
 
@@ -25,6 +31,27 @@ const result = getTreemap({
   height: 600,
 });
 ```
+
+In the browser
+```
+<script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.0/lib/bundle.min.js"></script>
+<script type="text/javascript">
+const result = getTreemap({
+  data: [ // your dataset
+    { value: 10 },
+    { value: 7 },
+    { value: 4 },
+    { value: 1 },
+    { value: 5 },
+    { value: 9 },
+  ],
+  width: 700, // the width and height of your treemap
+  height: 600,
+});
+</script>
+```
+
+# Features
 
 You can pass along properties with the data, they will be in the response object. For example a specific color for each data point:
 
