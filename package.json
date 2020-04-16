@@ -7,7 +7,7 @@
   "repository": "https://github.com/clementbat/treemap.git",
   "main": "src/index.js",
   "scripts": {
-    "build:bundle": "browserify -s getTreemap temp/index.js > temp/bundle.js",
+    "build:bundle": "browserify -s Treemap temp/index.js > temp/bundle.js",
     "build:compile": "babel src --out-dir temp",
     "build:uglify": "mkdir lib && uglifyjs temp/bundle.js -cm > lib/bundle.min.js",
     "build:reset": "rm -rf lib && rm -rf temp",
@@ -15,6 +15,7 @@
     "coverage": "nyc npm run test",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
+    "publish": "npm publish --access public",
     "test": "mocha tests"
   },
   "files": [

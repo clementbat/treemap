@@ -36,7 +36,7 @@ In the browser
 ```
 <script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.0/lib/bundle.min.js"></script>
 <script type="text/javascript">
-const result = getTreemap({
+const result = Treemap.getTreemap({
   data: [ // your dataset
     { value: 10 },
     { value: 7 },
