@@ -1,6 +1,6 @@
 {
   "name": "treemap-squarify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculates the treemap coordinates following the squarify algorithm",
   "author": "Clément Bataille",
   "license": "ISC",

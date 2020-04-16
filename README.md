@@ -9,7 +9,7 @@ npm install treemap-squarify
 ```
 Or in the browser
 ```
-<script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.0/lib/bundle.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.1/lib/bundle.min.js"></script>
 ```
 
 # Usage
@@ -34,7 +34,7 @@ const result = getTreemap({
 
 In the browser
 ```
-<script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.0/lib/bundle.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/treemap-squarify@1.0.1/lib/bundle.min.js"></script>
 <script type="text/javascript">
 const result = Treemap.getTreemap({
   data: [ // your dataset
